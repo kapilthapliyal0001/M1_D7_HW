@@ -86,6 +86,16 @@ addToTheSecond("This is an extra  4th list item added !");
 //   //
 // };
 
+const addParagraph = function(content) {
+    let new_para = document.createElement("p");
+    new_para.innerText = content;
+
+    let parent = document.querySelector("div");
+    parent.appendChild(new_para);
+}
+
+addParagraph("This is an additional paragraph added as a part of the exercise !");
+
 // /* EXERCISE 7
 // Write a function for making the first UL disappear.
 // */
@@ -93,6 +103,13 @@ addToTheSecond("This is an extra  4th list item added !");
 // const firstUlDisappear = function () {
 //   //
 // };
+
+const firstUlDisappear = function() {
+    document.getElementsByTagName("ul")[0].style.display = "none";
+    // console.log(document.getElementsByTagName("ul")[0]);
+}
+
+firstUlDisappear();
 
 // /* EXERCISE 8
 // Write a function for making the background of every UL green.
@@ -102,6 +119,14 @@ addToTheSecond("This is an extra  4th list item added !");
 //   //
 // };
 
+const paintItGreen = function() {
+    for (i = 0; i < (document.getElementsByTagName("ul").length); i++) {
+        document.getElementsByTagName("ul")[i].style.backgroundColor = "green";
+    }
+}
+
+paintItGreen();
+
 // /* EXERCISE 9
 // Make the heading of the page change color every time the user clicks on it.
 // */
@@ -109,6 +134,20 @@ addToTheSecond("This is an extra  4th list item added !");
 // const makeItClickable = function () {
 //   //
 // };
+const makeItClickable = function() {
+document.getElementsByTagName("h1")[0].addEventListener("click", function() {
+    let r = Math.floor(Math.random() * 250);
+    let g = Math.floor(Math.random() * 250);
+    let b = Math.floor(Math.random() * 250);
+    console.log(r, g, b);
+    // console.log()
+    // document.getElementsByTagName("h1")[0].style.color = `rgb(${r}','${g}','${b})`;
+    document.getElementsByTagName("h1")[0].style.color = "rgb(" + r + "," + g + "," + b + ")"; 
+    // var foo = 'bar';
+    // console.log(`Let's meet at the ${foo}`);
+})
+};
+makeItClickable();
 
 // /* EXERCISE 10
 // Change the footer text with something else when the user clicks on it.
