@@ -157,12 +157,24 @@ makeItClickable();
 //   //
 // };
 
+const changeFooterText = function() {
+    document.querySelector("footer").innerText = "This is changed cz of the exercise number 10";
+}
+
+changeFooterText();
+
 // /* EXERCISE 11
 // Attach an event listener to the input field in the page for console logging its value just after any keystroke.
 // */
 
 // const inputField = document.getElementById("input-field");
 // // ...
+
+document.querySelector("input").addEventListener("keypress", function(event) {
+    console.log(event.key);
+})
+
+
 
 // /* EXERCISE 12
 // Create a new welcome alert message when the page successfully loads.
@@ -172,5 +184,10 @@ makeItClickable();
 //   //
 // };
 
+window.onload = function() {
+    alert("Welcome to Kapil Docs");
+}
+
 // /* EXERCISE 13
-// Use HTML5 tags to divide the content of the page in a more semantic way. 
+// Use HTML5 tags to divide the content of the page in a more semantic way.
+
