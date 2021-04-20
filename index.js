@@ -44,6 +44,8 @@ const changePcontent = function(text) {
 
 changePcontent("The Paragraph has been changed !")
 
+
+
 // /* EXERCISE 4
 // Write a function for changing the destination of every link to https://www.google.com
 // */
@@ -52,6 +54,12 @@ changePcontent("The Paragraph has been changed !")
 //   //
 // };
 
+const changeURL = function() {
+    document.getElementsByTagName("a").href = "https://www.google.com/";
+    console.log(document.getElementsByTagName("a")[0]);
+}
+changeURL();
+
 // /* EXERCISE 5
 //  Write a function for adding a new item in the second list.
 //  */
@@ -59,6 +67,16 @@ changePcontent("The Paragraph has been changed !")
 // const addToTheSecond = function (content) {
 //   //
 // };
+
+const addToTheSecond = function(content) {
+    let new_list_item = document.createElement("li");
+    new_list_item.innerText = content;
+
+    let parent_element = document.getElementsByTagName("ul")[1];
+    parent_element.appendChild(new_list_item);
+}
+
+addToTheSecond("This is an extra  4th list item added !");
 
 // /* EXERCISE 6
 // Write a function for adding a second paragraph to the div.
