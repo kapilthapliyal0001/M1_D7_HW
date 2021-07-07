@@ -191,3 +191,5 @@ window.onload = function() {
 // /* EXERCISE 13
 // Use HTML5 tags to divide the content of the page in a more semantic way.
 
+// Tags already looks great! and I think we can add more divs instead to make it 
+// beautiful.
